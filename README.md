@@ -1,2 +1,3 @@
-# fjkt48-api
+# FJKT48 API Documentation
+
 FJKT48 API
