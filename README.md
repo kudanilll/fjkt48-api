@@ -1,3 +1,5 @@
 # FJKT48 API Documentation
 
-FJKT48 API
+FJKT48 API Documentation
+
+## Endpoint

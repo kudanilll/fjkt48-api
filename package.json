@@ -1,0 +1,32 @@
+{
+  "name": "fjkt48-api",
+  "version": "1.0.0",
+  "description": "FJKT48 API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kudanilll/fjkt48-api.git"
+  },
+  "author": "kudanilll",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kudanilll/fjkt48-api/issues"
+  },
+  "homepage": "https://github.com/kudanilll/fjkt48-api#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.1",
+    "express-rate-limit": "^7.4.1",
+    "mongodb": "^6.11.0",
+    "nodemailer": "^6.9.16",
+    "nodemon": "^3.1.7"
+  }
+}
