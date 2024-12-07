@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext"], // Kompatibilitas dengan ESNext
+    "target": "ESNext", // Agar hasil kompilasi JavaScript lebih modern
+    "module": "ESNext", // Gunakan ESNext untuk output modul
+    "moduleResolution": "node", // Resolusi modul sesuai standar Node.js
+    "outDir": "./dist", // Output hasil kompilasi ke folder dist
+    "esModuleInterop": true, // Kompatibilitas dengan CommonJS
+    "skipLibCheck": true, // Abaikan pemeriksaan tipe di file .d.ts (lebih cepat)
+    "strict": true, // Aktifkan mode strict
+    "resolveJsonModule": true, // Izinkan impor file JSON
+    "isolatedModules": true, // Pastikan setiap file bisa dibangun terpisah
+    "noImplicitAny": false, // Mengaktifkan pemeriksaan tipe dengan nilai "any"
+    "forceConsistentCasingInFileNames": true, // Jaga konsistensi casing di file names
+    "rootDir": "./src", // Direktori root untuk file TypeScript
+    "baseUrl": "./", // Direktori saat ini sebagai baseUrl
+    "paths": {
+      "@/*": ["./src/*"] // Definisikan alias untuk file di dalam folder src
+    }
+  },
+  "ts-node": {
+    "esm": true, // Gunakan ES module
+    "experimentalSpecifierResolution": "node" // Pastikan file .ts diresolve dengan cara node.js
+  },
+  "include": ["src"], // Sertakan semua file TypeScript di folder src
+  "exclude": ["node_modules", "dist"] // Abaikan folder node_modules dan dist
+}

@@ -3,8 +3,8 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 
-import config from "./src/utils/config.js";
-import routes from "./src/utils/routes.js";
+import config from "./utils/config";
+import router from "./utils/router";
 
 // initialize app
 const app = express();
@@ -22,12 +22,13 @@ app.use(
   })
 );
 
-// routes
-app.use(routes);
+// router
+app.use(router);
 
 // listen and start server
-const port = process.env.PORT || config.port;
+const port = config.port;
 app.listen(port, () => {
+  // eslint-disable-next-line no-useless-catch
   try {
     console.log(`Server running on 'http://localhost:${port}'`);
   } catch (error) {
