@@ -10,51 +10,55 @@ import { FlatCompat } from "@eslint/eslintrc";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
+  baseDirectory: __dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
 });
 
-export default [...compat.extends(
+export default [
+  ...compat.extends(
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-), {
+    "plugin:prettier/recommended"
+  ),
+  {
     plugins: {
-        prettier,
-        "@typescript-eslint": typescriptEslint,
+      prettier,
+      "@typescript-eslint": typescriptEslint,
     },
 
     languageOptions: {
-        globals: {
-            ...globals.node,
-            ...globals.jest,
-        },
+      globals: {
+        ...globals.node,
+        ...globals.jest,
+      },
 
-        parser: tsParser,
-        ecmaVersion: "latest",
-        sourceType: "module",
+      parser: tsParser,
+      ecmaVersion: "latest",
+      sourceType: "module",
 
-        parserOptions: {
-            project: "./tsconfig.json",
-        },
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
     },
 
     rules: {
-        "prettier/prettier": "error",
-        "@typescript-eslint/no-unused-vars": ["warn"],
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-explicit-any": "warn",
-        "no-console": "warn",
-        "no-unused-vars": "off",
-        "node/no-unsupported-features/es-syntax": "off",
-        "no-undef": "off",
+      "prettier/prettier": "error",
+      "@typescript-eslint/no-unused-vars": ["warn"],
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "no-console": "warn",
+      "no-unused-vars": "off",
+      "node/no-unsupported-features/es-syntax": "off",
+      "no-undef": "off",
     },
-}, {
+  },
+  {
     files: ["**/*.ts", "**/*.tsx"],
 
     rules: {
-        "@typescript-eslint/no-non-null-assertion": "warn",
-        "@typescript-eslint/ban-ts-comment": "warn",
+      "@typescript-eslint/no-non-null-assertion": "warn",
+      "@typescript-eslint/ban-ts-comment": "warn",
     },
-}];
+  },
+];
