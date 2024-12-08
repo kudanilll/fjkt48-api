@@ -12,7 +12,6 @@
     "isolatedModules": true, // Pastikan setiap file bisa dibangun terpisah
     "noImplicitAny": false, // Mengaktifkan pemeriksaan tipe dengan nilai "any"
     "forceConsistentCasingInFileNames": true, // Jaga konsistensi casing di file names
-    "rootDir": "./src", // Direktori root untuk file TypeScript
     "baseUrl": "./", // Direktori saat ini sebagai baseUrl
     "paths": {
       "@/*": ["./src/*"] // Definisikan alias untuk file di dalam folder src
