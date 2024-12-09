@@ -4,29 +4,27 @@ FJKT48 API Documentation
 
 ## Getting Started
 
-First step, clone this repo
+First step, clone this repo:
 
 ```bash
 $ git clone -b development https://github.com/achmaddaniel24/fjkt48-api.git fjkt48_api
 $ cd fjkt48_api
 ```
 
-Install all packages
+Install all packages:
 
-```bash
-$ npm i
-```
+| npm           | pnpm           | yarn           | bun           |
+| ------------- | -------------- | -------------- | ------------- |
+| `npm install` | `pnpm install` | `yarn install` | `bun install` |
 
-Setup prepare husky
+Setup prepare husky:
 
-```bash
-$ npm run prepare
-```
+| npm               | pnpm               | yarn           | bun           |
+| ----------------- | ------------------ | -------------- | ------------- |
+| `npm run prepare` | `pnpm run prepare` | `yarn prepare` | `bun prepare` |
 
-Run server
+To get started, run:
 
-```bash
-$ npm run dev
-```
-
-## Endpoint
+| npm           | pnpm           | yarn       | bun       |
+| ------------- | -------------- | ---------- | --------- |
+| `npm run dev` | `pnpm run dev` | `yarn dev` | `bun dev` |
