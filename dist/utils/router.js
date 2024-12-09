@@ -19,3 +19,4 @@ router.get("/hello", (req, res) => {
 router.get("/api/v1/member", secure, MemberController.getAllMembers);
 router.get("/api/v1/user", secure, UserController.getAllUsers);
 export default router;
+//# sourceMappingURL=router.js.map

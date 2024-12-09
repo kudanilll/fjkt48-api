@@ -42,3 +42,4 @@ else {
 }
 // Export a module-scoped MongoClient promise
 export default clientPromise;
+//# sourceMappingURL=mongodb.js.map

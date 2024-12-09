@@ -18,3 +18,4 @@ export default class MemberController {
         }
     }
 }
+//# sourceMappingURL=member.js.map

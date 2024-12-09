@@ -12,6 +12,8 @@
     "isolatedModules": true, // Pastikan setiap file bisa dibangun terpisah
     "noImplicitAny": false, // Mengaktifkan pemeriksaan tipe dengan nilai "any"
     "forceConsistentCasingInFileNames": true, // Jaga konsistensi casing di file names
+    "allowSyntheticDefaultImports": true, // Izinkan import default sintetik
+    "sourceMap": true, // Aktifkan sourcemap
     "baseUrl": "./", // Direktori saat ini sebagai baseUrl
     "paths": {
       "@/*": ["./src/*"] // Definisikan alias untuk file di dalam folder src
@@ -22,5 +24,5 @@
     "experimentalSpecifierResolution": "node" // Pastikan file .ts diresolve dengan cara node.js
   },
   "include": ["src"], // Sertakan semua file TypeScript di folder src
-  "exclude": ["node_modules", "dist"] // Abaikan folder node_modules dan dist
+  "exclude": ["node_modules"] // Abaikan folder node_modules dan dist
 }

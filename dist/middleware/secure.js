@@ -10,3 +10,4 @@ function secure(req, res, next) {
     next();
 }
 export default secure;
+//# sourceMappingURL=secure.js.map

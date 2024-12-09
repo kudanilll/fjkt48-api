@@ -14,3 +14,4 @@ export default class MemberService {
         return data;
     }
 }
+//# sourceMappingURL=member.js.map
