@@ -30,6 +30,7 @@ const port = config.port;
 app.listen(port, () => {
   // eslint-disable-next-line no-useless-catch
   try {
+    // eslint-disable-next-line no-console
     console.log(`Server running on 'http://localhost:${port}'`);
   } catch (error) {
     throw error;
