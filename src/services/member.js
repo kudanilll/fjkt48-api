@@ -1,5 +1,5 @@
-// import MemberModel from "@/models/member";
-import clientPromise from "../lib/mongodb";
+import MemberModel from "../models/member.js";
+import clientPromise from "../lib/mongodb.js";
 
 export default class MemberService {
   static async getAllMembers() {
@@ -11,6 +11,6 @@ export default class MemberService {
       .sort({ _id: 1 })
       .toArray();
     if (!data || data.length === 0) return null;
-    return data;
+    return data.map((member) => new MemberModel(member).toObject());
   }
 }

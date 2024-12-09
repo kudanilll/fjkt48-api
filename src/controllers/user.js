@@ -1,8 +1,7 @@
-import { Request, Response } from "express";
-import UserService from "../services/user";
+import UserService from "../services/user.js";
 
 export default class UserController {
-  static async getAllUsers(req: Request, res: Response) {
+  static async getAllUsers(req, res) {
     const users = await UserService.getAllUsers();
     if (users === null) {
       res.status(404).json({

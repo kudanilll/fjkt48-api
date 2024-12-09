@@ -1,4 +1,4 @@
-import config from "../utils/config";
+import config from "../utils/config.js";
 
 if (!process.env.API_KEY) {
   throw new Error("API_KEY is not defined");

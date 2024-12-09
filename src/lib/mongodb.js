@@ -1,5 +1,5 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
-import config from "../utils/config";
+import config from "../utils/config.js";
 
 if (!process.env.MONGODB_URI) {
   throw new Error("MONGODB_URI is not defined");
@@ -14,7 +14,7 @@ const options = {
   },
 };
 
-async function createTTLIndex(client: MongoClient) {
+async function createTTLIndex(client) {
   try {
     // Buat TTL index (auth/pending)
     const db = client.db("auth");
@@ -24,26 +24,27 @@ async function createTTLIndex(client: MongoClient) {
       { expireAfterSeconds: 600 } // 10 menit
     );
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error("Failed to create TTL index:", error);
     throw new Error(`Failed to create TTL index: ${error}`);
   }
 }
 
-let clientPromise: any;
+let clientPromise;
 
 if (process.env.NODE_ENV === "development") {
   // In development mode, use a global variable so that the value
   // is preserved across module reloads caused by HMR (Hot Module Replacement).
   if (!global._mongoClient) {
-    global._mongoClient = new MongoClient(uri as string, options).connect();
+    global._mongoClient = new MongoClient(uri, options).connect();
   }
   clientPromise = global._mongoClient;
-  clientPromise.then((client: MongoClient) => createTTLIndex(client));
+  clientPromise.then((client) => createTTLIndex(client));
 } else {
   // In production mode, it's best to not use a global variable.
-  const client = new MongoClient(uri as string, options);
+  const client = new MongoClient(uri, options);
   clientPromise = client.connect();
-  clientPromise.then((client: MongoClient) => createTTLIndex(client));
+  clientPromise.then((client) => createTTLIndex(client));
 }
 
 // Export a module-scoped MongoClient promise

@@ -1,8 +1,7 @@
-import { Request, Response } from "express";
-import MemberService from "../services/member";
+import MemberService from "../services/member.js";
 
 export default class MemberController {
-  static async getAllMembers(req: Request, res: Response) {
+  static async getAllMembers(req, res) {
     const members = await MemberService.getAllMembers();
     if (members === null) {
       res.status(404).json({

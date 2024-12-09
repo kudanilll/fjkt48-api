@@ -1,4 +1,5 @@
-import clientPromise from "../lib/mongodb";
+import UserModel from "../models/user.js";
+import clientPromise from "../lib/mongodb.js";
 
 export default class UserService {
   static async getAllUsers() {
@@ -10,6 +11,6 @@ export default class UserService {
       .sort({ _id: 1 })
       .toArray();
     if (!data || data.length === 0) return null;
-    return data;
+    return data.map((user) => new UserModel(user).toObject());
   }
 }

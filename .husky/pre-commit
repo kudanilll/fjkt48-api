@@ -1,1 +1,1 @@
-npx lint-staged && npm run format && npm run build:check && npm run build && npm run build:add
+npx lint-staged && npm run format

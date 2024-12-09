@@ -3,8 +3,8 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 
-import config from "./utils/config";
-import router from "./utils/router";
+import config from "./src/utils/config.js";
+import router from "./src/utils/router.js";
 
 // initialize app
 const app = express();
