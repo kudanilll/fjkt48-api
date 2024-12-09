@@ -13,4 +13,16 @@ export default class MemberService {
     if (!data || data.length === 0) return null;
     return data.map((member) => new MemberModel(member).toObject());
   }
+
+  // Mendapatkan member berdasarkan nama
+  static async getMemberById(id) {
+    const client = await clientPromise;
+    const data = await client
+      .db("profile")
+      .collection("member")
+      .findOne({ _id: id });
+
+    if (!data) return null;
+    return new MemberModel(data).toObject();
+  }
 }

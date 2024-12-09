@@ -19,7 +19,11 @@ router.get("/hello", (req, res) => {
   });
 });
 
+// member
 router.get("/api/v1/member", secure, MemberController.getAllMembers);
+router.get("/api/v1/member/id/:id", secure, MemberController.getMemberById);
+
+// user
 router.get("/api/v1/user", secure, UserController.getAllUsers);
 
 export default router;
