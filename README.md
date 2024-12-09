@@ -7,7 +7,7 @@ FJKT48 API Documentation
 First step, clone this repo:
 
 ```bash
-$ git clone -b development https://github.com/achmaddaniel24/fjkt48-api.git fjkt48_api
+$ git clone https://github.com/achmaddaniel24/fjkt48-api.git fjkt48_api
 $ cd fjkt48_api
 ```
 
