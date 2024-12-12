@@ -1,7 +1,7 @@
 import config from "../utils/config.js";
 
 if (!process.env.API_KEY) {
-  throw new Error("API_KEY is not defined");
+  throw new Error('Invalid/Missing environment variable: "API_KEY"');
 }
 
 const apiKey = process.env.API_KEY || config.apiKey;

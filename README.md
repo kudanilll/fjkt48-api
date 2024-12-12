@@ -2,7 +2,7 @@
 
 FJKT48 API Documentation
 
-## Getting Started
+## 🛠️ Getting Started
 
 First step, clone this repo:
 
@@ -28,3 +28,25 @@ To get started, run:
 | npm           | pnpm           | yarn       | bun       |
 | ------------- | -------------- | ---------- | --------- |
 | `npm run dev` | `pnpm run dev` | `yarn dev` | `bun dev` |
+
+---
+
+## 🔗 Contribute
+
+Want to contribute? Great!
+
+To fix a bug or enhance an existing module, follow these steps:
+
+- Fork the repo
+
+- Create a new branch (`git checkout -b improve-feature`)
+
+- Make the appropriate changes in the files
+
+- Add changes to reflect the changes made
+
+- Commit your changes (`git commit -am 'Improve feature'`)
+
+- Push to the branch (`git push origin improve-feature`)
+
+- Create a Pull Request

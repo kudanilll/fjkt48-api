@@ -1,27 +1,26 @@
-import { ObjectId } from "mongodb"; // Impor ObjectId dari mongodb
 import { convertToJakartaTime } from "../utils/time.js";
 
-class UserModel {
-  constructor({ _id, email, password, name, image, createdAt }) {
-    this._id = _id || new ObjectId(); // Jika _id tidak diberikan, buat baru
+class PendingUserModel {
+  constructor({ email, password, name, otp, otpExpiresAt, createdAt }) {
     this.email = email;
     this.password = password;
     this.name = name;
-    this.image = image || null; // Optional, bisa null jika tidak ada
+    this.otp = otp;
+    this.otpExpiresAt = otpExpiresAt;
     this.createdAt = createdAt || convertToJakartaTime(new Date()); // Jika tidak ada createdAt, set default ke tanggal sekarang
   }
 
   // Menambahkan fungsi toObject
   toObject() {
     return {
-      _id: this._id,
       email: this.email,
       password: this.password,
       name: this.name,
-      image: this.image,
+      otp: this.otp,
+      otpExpiresAt: this.otpExpiresAt,
       createdAt: this.createdAt,
     };
   }
 }
 
-export default UserModel;
+export default PendingUserModel;

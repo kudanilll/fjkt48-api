@@ -21,7 +21,6 @@ export default class MemberService {
       .db("profile")
       .collection("member")
       .findOne({ _id: id });
-
     if (!data) return null;
     return new MemberModel(data).toObject();
   }
