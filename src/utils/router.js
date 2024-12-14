@@ -4,6 +4,7 @@ import BannerController from "../controllers/banner.js";
 import MemberController from "../controllers/member.js";
 import UserController from "../controllers/user.js";
 import AuthController from "../controllers/auth.js";
+import TraineeController from "../controllers/trainee.js";
 
 const router = Router();
 
@@ -37,6 +38,10 @@ router.get(
 // member
 router.get("/api/v1/member", secure, MemberController.getAllMembers);
 router.get("/api/v1/member/id/:id", secure, MemberController.getMemberById);
+
+// trainee
+router.get("/api/v1/trainee", secure, TraineeController.getAllTrainee);
+router.get("/api/v1/trainee/id/:id", secure, TraineeController.getTraineeById);
 
 // user
 router.get("/api/v1/user", secure, UserController.getAllUsers);
