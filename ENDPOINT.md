@@ -6,15 +6,17 @@ API documentation to access FJKT48 data easily and quickly.
 
 ### 🎤 Member & Trainee Endpoints
 
-| **Endpoint**            | **Method** | **Parameters**    | **Description**                           |
-| ----------------------- | ---------- | ----------------- | ----------------------------------------- |
-| `/api/v1/member`        | `GET`      | `-`               | Retrieve all members of JKT48.            |
-| `/api/v1/member/id/:id` | `GET`      | `id`: _Member ID_ | Retrieve details of a member by their ID. |
+| **Endpoint**             | **Method** | **Parameters**     | **Description**                            |
+| ------------------------ | ---------- | ------------------ | ------------------------------------------ |
+| `/api/v1/member`         | `GET`      | `-`                | Retrieve all members of JKT48.             |
+| `/api/v1/member/id/:id`  | `GET`      | `id`: _Member ID_  | Retrieve details of a member by their ID.  |
+| `/api/v1/trainee`        | `GET`      | `-`                | Retrieve all trainees of JKT48.            |
+| `/api/v1/trainee/id/:id` | `GET`      | `id`: _Trainee ID_ | Retrieve details of a trainee by their ID. |
 
 ---
 
 > **Note:**  
-> Replace `:id` with the actual ID of the member when accessing the endpoint.
+> Replace `:id` with the actual ID of the member/trainee when accessing the endpoint.
 
 ### 🛠️ How to Use
 

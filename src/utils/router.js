@@ -5,6 +5,7 @@ import MemberController from "../controllers/member.js";
 import UserController from "../controllers/user.js";
 import AuthController from "../controllers/auth.js";
 import TraineeController from "../controllers/trainee.js";
+import ScheduleController from "../controllers/schedule.js";
 
 const router = Router();
 
@@ -45,5 +46,17 @@ router.get("/api/v1/trainee/id/:id", secure, TraineeController.getTraineeById);
 
 // user
 router.get("/api/v1/user", secure, UserController.getAllUsers);
+
+// schedule
+router.get(
+  "/api/v1/schedule/year/:year",
+  secure,
+  ScheduleController.getSchedule
+);
+router.get(
+  "/api/v1/schedule/year/:year/month/:month",
+  secure,
+  ScheduleController.getScheduleByMonthYear
+);
 
 export default router;
